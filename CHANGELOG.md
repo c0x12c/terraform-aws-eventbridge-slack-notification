@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.0]() (2025-10-14)
+
+### Features
+
+* Improve EventBridge rule configuration flexibility.
+* Optimize resource naming conventions for better clarity.
+
 ## [1.0.0]() (2025-10-14)
 
 ### Features

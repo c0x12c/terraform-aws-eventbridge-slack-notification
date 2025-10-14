@@ -39,8 +39,8 @@ variable "lambda_environment_variables" {
 
 variable "additional_iam_policy_arns" {
   description = "Additional IAM policy ARNs to attach to the Lambda execution role"
-  type        = list(string)
-  default     = []
+  type        = map(string)
+  default     = {}
 }
 
 variable "event_rules" {
