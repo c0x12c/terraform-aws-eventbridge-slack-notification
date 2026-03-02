@@ -22,7 +22,7 @@ module "notification" {
 
   lambda_source_file = "${path.module}/files/index.mjs"
   lambda_handler     = "index.handler"
-  lambda_runtime     = "nodejs20.x"
+  lambda_runtime     = "nodejs22.x"
 
   lambda_environment_variables = {
     SERVICE_NAME = "my-service"
@@ -62,7 +62,7 @@ module "notification" {
 | slack_webhook_url | Slack webhook URL for sending notifications | `string` | n/a | yes |
 | lambda_source_file | Path to the Lambda function source file | `string` | n/a | yes |
 | lambda_handler | Lambda function handler | `string` | `"index.handler"` | no |
-| lambda_runtime | Lambda function runtime | `string` | `"nodejs20.x"` | no |
+| lambda_runtime | Lambda function runtime | `string` | `"nodejs22.x"` | no |
 | lambda_environment_variables | Additional environment variables for the Lambda function | `map(string)` | `{}` | no |
 | additional_iam_policy_arns | Additional IAM policy ARNs to attach to the Lambda execution role | `list(string)` | `[]` | no |
 | event_rules | List of EventBridge rule configurations | `list(object)` | n/a | yes |
@@ -120,7 +120,7 @@ No modules.
 | <a name="input_event_rules"></a> [event\_rules](#input\_event\_rules) | List of EventBridge rule configurations | <pre>list(object({<br/>    name          = string<br/>    description   = string<br/>    event_pattern = any<br/>  }))</pre> | n/a | yes |
 | <a name="input_lambda_environment_variables"></a> [lambda\_environment\_variables](#input\_lambda\_environment\_variables) | Additional environment variables for the Lambda function | `map(string)` | `{}` | no |
 | <a name="input_lambda_handler"></a> [lambda\_handler](#input\_lambda\_handler) | Lambda function handler | `string` | `"index.handler"` | no |
-| <a name="input_lambda_runtime"></a> [lambda\_runtime](#input\_lambda\_runtime) | Lambda function runtime | `string` | `"nodejs20.x"` | no |
+| <a name="input_lambda_runtime"></a> [lambda\_runtime](#input\_lambda\_runtime) | Lambda function runtime | `string` | `"nodejs22.x"` | no |
 | <a name="input_lambda_source_file"></a> [lambda\_source\_file](#input\_lambda\_source\_file) | Path to the Lambda function source file | `string` | n/a | yes |
 | <a name="input_name"></a> [name](#input\_name) | The name prefix for all resources | `string` | n/a | yes |
 | <a name="input_slack_webhook_url"></a> [slack\_webhook\_url](#input\_slack\_webhook\_url) | Slack webhook URL for sending notifications | `string` | n/a | yes |
