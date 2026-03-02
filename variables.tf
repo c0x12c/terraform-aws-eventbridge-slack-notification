@@ -28,7 +28,7 @@ variable "lambda_handler" {
 variable "lambda_runtime" {
   description = "Lambda function runtime"
   type        = string
-  default     = "nodejs20.x"
+  default     = "nodejs22.x"
 }
 
 variable "lambda_environment_variables" {
